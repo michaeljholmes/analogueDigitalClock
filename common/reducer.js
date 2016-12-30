@@ -16,7 +16,6 @@ export default function clockApp(state=initialState, action) {
 			loading: true
       })
 	case RECIEVED_DATE_TIME:
-	console.log(action.dateTime);
 	return Object.assign({}, state, {
 			loading: false,
 			loaded: true,
@@ -35,28 +34,24 @@ export default function clockApp(state=initialState, action) {
 
 //Action
 export function loadCurrentDateTime() {
-	console.log("loadCurrentDateTime");
   return {
     type: LOAD_DATE_TIME
   };
 }
 
 export function receivedCurrentDateTime(dateTime) {
-	console.log("receivedCurrentDateTime");
   return {
     type: RECIEVED_DATE_TIME, dateTime
   };
 }
 
 export function failedToGetCurrentDateTime(error) {
-	console.log("failedToGetCurrentDateTime");
   return {
     type: FAILED_DATE_TIME, error
   };
 }
 
 export function getCurrentDateTime() {
-	console.log("getCurrentDateTime");
   return function (dispatch) {
 	
     // app state is updated to inform that the API call is starting.
@@ -73,6 +68,5 @@ export function getCurrentDateTime() {
 }
 
 export function isDateLoaded(globalState){
-	console.log(globalState);
 	return globalState.loaded !== false;
 }

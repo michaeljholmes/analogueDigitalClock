@@ -12,7 +12,7 @@ const store = createStore(
 	clockApp,
 	applyMiddleware(
 		thunkMiddleware
-	)
+	)	
 )
 
 ReactDOM.render(  
