@@ -1,7 +1,7 @@
 import React, {PropTypes,Component} from 'react';
 import {connect, getState} from 'react-redux';
 import {getCurrentDateTime} from './reducer';
-import AdditionalInfo from './additionalInfoComponent';
+import AdditionalInfo from './components/additionalInfoComponent';
 import moment from 'moment';
 import ReactDOM from 'react-dom';
 

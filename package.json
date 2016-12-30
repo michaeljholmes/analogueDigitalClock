@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "description": "An example of a universally-rendered Redux application",
   "scripts": {
-    "start": "node server/index.js"
+    "start": "node server/index.js",
+    "test": "mocha setup.js common/tests/analogueClock_tests.js"
   },
   "repository": {
     "type": "git",
@@ -17,8 +18,11 @@
   "dependencies": {
     "babel-polyfill": "^6.3.14",
     "babel-register": "^6.4.3",
+    "enzyme": "^2.7.0",
+    "expect": "^1.20.2",
     "express": "^4.13.3",
     "isomorphic-fetch": "^2.2.1",
+    "mocha": "^3.2.0",
     "moment": "^2.17.1",
     "qs": "^4.0.0",
     "react": "^15.1.0",
@@ -36,6 +40,8 @@
     "babel-preset-react": "^6.3.13",
     "babel-preset-react-hmre": "^1.1.1",
     "babel-runtime": "^6.3.13",
+    "jsdom": "^9.9.1",
+    "react-addons-test-utils": "^15.4.1",
     "webpack": "^1.11.0",
     "webpack-dev-middleware": "^1.4.0",
     "webpack-hot-middleware": "^2.9.1"
